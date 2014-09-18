@@ -1,0 +1,27 @@
+.row
+  div.col-md-7.col-lg-6.pull-right.text-center
+    ul.pagination.pull-right      
+      - if page != 1
+        li
+          a href="/home/index?page=#{page - 1}" class="show" Previous
+
+      - for index in 1..total_pages
+        - around = ''
+        - if index.between?(page-5, page+5)
+          - around = 'show'
+
+        - label = index
+        - if index == (page - 6) || index == (page + 6)
+          - label = "..."
+          - around = 'show'
+
+        - if page == index
+          li.active
+            a href="/home/index?page=#{index}" class="#{around}" #{label}
+        - else
+          li
+            a href="/home/index?page=#{index}" class="#{around}" #{label}
+
+      - if page != total_pages
+        li
+          a href="/home/index?page=#{page + 1}" class="show" Next

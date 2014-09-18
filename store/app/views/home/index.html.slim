@@ -1,0 +1,12 @@
+.container.top20
+  h1.top20 Icons Gallery
+  p This is a gallery for icons
+
+  .row.list-group.top20
+    - @images.each do |image|
+      .item.col-xs-4.col-lg-4
+        .thumbnail
+          .group.list-group-image
+            = image_tag "gallery/#{image.split('/').last}", class: "img-responsive"
+
+  = render partial: 'shared/pagination', locals: { page: @page, total_pages: @total_pages }
