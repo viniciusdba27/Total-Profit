@@ -1,9 +1,9 @@
 .row
-  div.col-md-7.col-lg-6.pull-right.text-center
-    ul.pagination.pull-right      
+  div.text-center
+    ul.pagination
       - if page != 1
         li
-          a href="/home/index?page=#{page - 1}" class="show" Previous
+          a.previous href="/home/index?page=#{page - 1}" class="show" Previous
 
       - for index in 1..total_pages
         - around = ''
@@ -23,5 +23,5 @@
             a href="/home/index?page=#{index}" class="#{around}" #{label}
 
       - if page != total_pages
-        li
-          a href="/home/index?page=#{page + 1}" class="show" Next
+        li       
+          a.next href="/home/index?page=#{page + 1}" class="show" Next

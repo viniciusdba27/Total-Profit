@@ -1,12 +1,13 @@
 .container.top20
-  h1.top20 Icons Gallery
-  p This is a gallery for icons
+  h1.top20 Rockstars Gallery
+  p Most amazing rock stars revealed by our bar
 
   .row.list-group.top20
     - @images.each do |image|
-      .item.col-xs-4.col-lg-4
+      .item.col-xs-4.col-lg-4.col-xs-6
         .thumbnail
           .group.list-group-image
             = image_tag "gallery/#{image.split('/').last}", class: "img-responsive"
 
   = render partial: 'shared/pagination', locals: { page: @page, total_pages: @total_pages }
+  = render partial: 'shared/modal'
