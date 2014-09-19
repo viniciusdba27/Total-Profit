@@ -1,9 +1,9 @@
-Gallery Images: app\assets\images\gallery
+Gallery Images: app-assets-images-gallery
 
-Layout Images: app\assets\images\layout
+Layout Images: app-assets-images-layout
 
-Hmtl views: app\views    <- using slim
+Hmtl views: app-views    <- using slim
 
-Coffeescripts: app\assets\javascripts
+Coffeescripts: app-assets-javascripts
 
-Controllers: app\controllers
+Controllers: app-controllers
