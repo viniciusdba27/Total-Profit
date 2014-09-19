@@ -2,7 +2,7 @@ Gallery Images: app-assets-images-gallery
 
 Layout Images: app-assets-images-layout
 
-Hmtl views: app-views    <- using slim
+Html views: app-views    <- using slim
 
 Coffeescripts: app-assets-javascripts
 
